@@ -13,15 +13,10 @@ export class HomePage {
 
   async showPop(ev: any) {
     const popover = await this.popoverController.create({
-      component: PopContentComponent,
-      cssClass: 'my-custom-class',
-      event: ev,
-      translucent: true
+      component: PopContentComponent,      
+      event: ev      
     });
     await popover.present();
-
-    const { role } = await popover.onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
   }
 
 }
