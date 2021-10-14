@@ -14,6 +14,10 @@
   </ion-header>
 
   <div id="container">
-    <ion-button (click)="showPop($event)">Popover</ion-button>
+    <div class="padded" style="display: flex" *ngFor="let group of grouped">
+      <div class="padded" *ngFor="let group2 of grouped2">
+        <ion-button (click)="showPop($event)">Popover</ion-button>
+      </div>
+    </div>
   </div>
 </ion-content>
